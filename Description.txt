@@ -1,0 +1,55 @@
+
+ Library Management System
+  
+  Description:
+  
+  The Library Management System is a web API designed to manage a library's operations,
+  including books, members, and issued books. This API provides CRUD (Create, Read, Update, Delete)
+  operations for managing library resources. It utilizes Azure Cosmos DB as the database backend.
+  
+  Features:
+  
+  1. Book Operations:
+     - Add a book to the library.
+     - Retrieve a book by its unique identifier (UID).
+     - Retrieve a book by its name.
+     - Retrieve all books.
+ 
+    - Retrieve all available books that are not issued.
+     - Retrieve all issued books.
+     - Update book details.
+     - Delete a book from the library.
+  
+  2. Member Operations:
+     - Add a new member to the library.
+     - Retrieve a member by their unique identifier (UID).
+     - Retrieve all members.
+     - Update member details.
+     - Delete a member from the library.
+  
+  3. Issue Operations:
+     - Issue a book to a member.
+     - Retrieve an issued book by its unique identifier (UID).
+     - Update the details of an issued book.
+     - Delete an issued book record.
+  
+  DTOs (Data Transfer Objects):
+  
+  1. Book:
+     - Represents a book entity with properties such as UID, title, author, published date, ISBN, and availability status.
+  
+  2. Member:
+     - Represents a library member entity with properties such as UID, name, date of birth, and email.
+  
+  3. Issue:
+   - Represents an issue entity with properties such as UID, book ID, member ID, issue date, return date, and return status.
+ 
+  Dependencies:
+  
+  - Microsoft.AspNetCore.Mvc: Provides MVC framework for creating RESTful APIs in ASP.NET Core.
+  - LibraryApi.Models: Contains model classes representing the data transferred by the API.
+  - LibraryApi.Entities: Contains entity classes representing the data stored in the database.
+  - CosmosDbClient: A client for interacting with Azure Cosmos DB to perform database operations.
+  
+  Author: Yash Dhamak
+ 
